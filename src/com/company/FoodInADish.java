@@ -15,7 +15,6 @@ public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADi
 
     @Override
     public void draw() {
-
     }
 
     @Override

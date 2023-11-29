@@ -5,8 +5,8 @@ public class Food {
     private double kg;
 
     Food(){
-        this.kg=kg;
-        this.name=name;
+        this.kg=0;
+        this.name="";
     }
 
     public String getName() {
