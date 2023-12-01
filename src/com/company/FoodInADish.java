@@ -1,5 +1,7 @@
 package com.company;
 
+import javax.swing.*;
+
 public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADish<T>>{
     private T food;
     private String dishColor;
@@ -14,7 +16,10 @@ public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADi
     }
 
     @Override
-    public void draw() {
+    public JPanel draw() {
+        JPanel jp =  new JPanel();
+
+        jp.add()
     }
 
     @Override
