@@ -13,22 +13,31 @@ public class Main {
     FoodInADish<Food> bananaDish = new FoodInADish<Food>();
     FoodInADish<Food> pepperDish = new FoodInADish<Food>();
 
-    Fruit apple = new Fruit();
+    Food apple = new Fruit();
+        apple.setName("apple");
+        apple.setKg(2.5);
+        ((Fruit)apple).setReadyToEat(true);
+
         appleDish.setFood(apple);
         appleDish.setDishColor("purple");
-        apple.setKg(2.5);
         dishes.add(appleDish);
 
-    Fruit banana = new Fruit();
+    Food banana = new Fruit();
+        banana.setName("banana");
+        banana.setKg(1.8);
+        ((Fruit)banana).setReadyToEat(true);
+
         bananaDish.setFood(banana);
         bananaDish.setDishColor("blue");
-        banana.setKg(1.8);
         dishes.add(bananaDish);
 
-    Vegetable pepper = new Vegetable();
+    Food pepper = new Vegetable();
+        pepper.setName("pepper");
+        pepper.setKg(4.2);
+        ((Vegetable)pepper).setFresh(true);
+
         pepperDish.setFood(pepper);
         pepperDish.setDishColor("yellow");
-        pepper.setKg(4.2);
         dishes.add(pepperDish);
 
         System.out.println(appleDish.compareTo(bananaDish));
