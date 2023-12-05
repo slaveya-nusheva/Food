@@ -13,6 +13,7 @@ public class Main {
     FoodInADish<Food> bananaDish = new FoodInADish<Food>();
     FoodInADish<Food> pepperDish = new FoodInADish<Food>();
 
+    //apple
     Food apple = new Fruit();
         apple.setName("apple");
         apple.setKg(2.5);
@@ -22,6 +23,7 @@ public class Main {
         appleDish.setDishColor("purple");
         dishes.add(appleDish);
 
+    //banana
     Food banana = new Fruit();
         banana.setName("banana");
         banana.setKg(1.8);
@@ -31,6 +33,7 @@ public class Main {
         bananaDish.setDishColor("blue");
         dishes.add(bananaDish);
 
+    //pepper
     Food pepper = new Vegetable();
         pepper.setName("pepper");
         pepper.setKg(4.2);
