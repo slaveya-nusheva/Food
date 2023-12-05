@@ -15,19 +15,19 @@ public class Main {
 
     Fruit apple = new Fruit();
         appleDish.setFood(apple);
-        appleDish.setDishColor("white");
+        appleDish.setDishColor("purple");
         apple.setKg(2.5);
         dishes.add(appleDish);
 
     Fruit banana = new Fruit();
         bananaDish.setFood(banana);
-        bananaDish.setDishColor("yellow");
+        bananaDish.setDishColor("blue");
         banana.setKg(1.8);
         dishes.add(bananaDish);
 
     Vegetable pepper = new Vegetable();
         pepperDish.setFood(pepper);
-        pepperDish.setDishColor("red");
+        pepperDish.setDishColor("yellow");
         pepper.setKg(4.2);
         dishes.add(pepperDish);
 
@@ -35,15 +35,17 @@ public class Main {
 
         Collections.sort(dishes);
 
-        JFrame fr  = new JFrame('')
+        JFrame fr  = new JFrame("Food");
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-
-        for (FoodInADish<Food> f : dishes)
+        for (FoodInADish<Food> current : dishes)
         {
-            fr.add(f.draw());
+            JPanel p = current.draw();
+            fr.add(current.draw());
         }
 
-
+        fr.setSize(400,400);
+        fr.setVisible(true);
     }
 }

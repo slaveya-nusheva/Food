@@ -1,25 +1,30 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADish<T>>{
     private T food;
     private String dishColor;
-    public FoodInADish() {
+    private Image imgF,imgP;
+
+    FoodInADish() {
         this.food = (T) new Object();
-        this.dishColor = "white";
+        this.dishColor = "";
     }
 
-    public FoodInADish(T food, String dishColor) {
+    FoodInADish(T food, String dishColor) {
         this.food = food;
         this.dishColor = dishColor;
     }
 
+
     @Override
     public JPanel draw() {
         JPanel jp =  new JPanel();
-
-        jp.add()
+        this.imgF = new ImageIcon("resources/"+food.toString()+".png").getImage();
+        this.imgP = new ImageIcon("resources/"+dishColor.toString()+".jpg").getImage();
+        return jp;
     }
 
     @Override

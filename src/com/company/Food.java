@@ -9,6 +9,11 @@ public class Food {
         this.name="";
     }
 
+    Food(String name, double kg){
+        this.name = name;
+        this.kg= kg;
+    }
+
     public String getName() {
         return name;
     }
