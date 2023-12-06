@@ -9,14 +9,17 @@ public abstract class DrawableObj{
 
     public abstract JPanel draw();
 
-    public DrawableObj(int xCoord, int yCoord, int width, int height) {
+    DrawableObj(int xCoord, int yCoord, int width, int height) {
         this.xCoord = xCoord;
         this.yCoord = yCoord;
         this.width = width;
         this.height = height;
     }
 
-    public DrawableObj(){
-
+    DrawableObj(){
+        this.xCoord = -1;
+        this.yCoord = -1;
+        this.width = 200;
+        this.height = 200;
     }
 }

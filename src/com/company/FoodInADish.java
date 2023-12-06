@@ -6,7 +6,6 @@ import java.awt.*;
 public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADish<T>>{
     private T food;
     private String dishColor;
-    private Image imgF,imgP;
 
     FoodInADish() {
         this.food = (T) new Object();
@@ -22,8 +21,10 @@ public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADi
     @Override
     public JPanel draw() {
         JPanel jp =  new JPanel();
-        this.imgF = new ImageIcon("resources/"+food.toString()+".png").getImage();
-        this.imgP = new ImageIcon("resources/"+dishColor.toString()+".jpg").getImage();
+        JLabel lbl = new JLabel();
+        imgFood = new ImageIcon("resources/"+food.toString()+".png").getImage();
+        imgPlate = new ImageIcon("resources/"+dishColor.toString()+".png").getImage();
+        jp.add(lbl);
         return jp;
     }
 

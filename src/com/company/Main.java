@@ -20,7 +20,7 @@ public class Main {
         ((Fruit)apple).setReadyToEat(true);
 
         appleDish.setFood(apple);
-        appleDish.setDishColor("purple");
+        appleDish.setDishColor("green");
         dishes.add(appleDish);
 
     //banana
@@ -30,7 +30,7 @@ public class Main {
         ((Fruit)banana).setReadyToEat(true);
 
         bananaDish.setFood(banana);
-        bananaDish.setDishColor("blue");
+        bananaDish.setDishColor("white");
         dishes.add(bananaDish);
 
     //pepper
@@ -40,7 +40,7 @@ public class Main {
         ((Vegetable)pepper).setFresh(true);
 
         pepperDish.setFood(pepper);
-        pepperDish.setDishColor("yellow");
+        pepperDish.setDishColor("blue");
         dishes.add(pepperDish);
 
         System.out.println(appleDish.compareTo(bananaDish));
