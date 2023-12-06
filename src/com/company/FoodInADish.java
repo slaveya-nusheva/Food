@@ -21,10 +21,19 @@ public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADi
     @Override
     public JPanel draw() {
         JPanel jp =  new JPanel();
-        JLabel lbl = new JLabel();
-        imgFood = new ImageIcon("resources/"+food.toString()+".png").getImage();
-        imgPlate = new ImageIcon("resources/"+dishColor.toString()+".png").getImage();
-        jp.add(lbl);
+        ImageIcon imgFood = new ImageIcon("resources/"+food+".png");
+        ImageIcon imgPlate = new ImageIcon("resources/"+dishColor+".png");
+
+        JLabel foodLbl = new JLabel();
+        JLabel plateLbl = new JLabel();
+
+        foodLbl.setBounds(0,0,this.getWidth(), this.getHeight());
+        plateLbl.setBounds(0,0,this.getWidth()+5, this.getHeight()+5);
+
+        jp.add(foodLbl);
+        jp.add(plateLbl);
+        jp.setVisible(true);
+
         return jp;
     }
 

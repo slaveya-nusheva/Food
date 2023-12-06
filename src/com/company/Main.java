@@ -9,19 +9,19 @@ public class Main {
 
     public static void main(String[] args) {
 	List <FoodInADish<Food>> dishes = new ArrayList<FoodInADish<Food>>();
-    FoodInADish<Food> appleDish = new FoodInADish<Food>();
+    FoodInADish<Food> strawberryDish = new FoodInADish<Food>();
     FoodInADish<Food> bananaDish = new FoodInADish<Food>();
     FoodInADish<Food> pepperDish = new FoodInADish<Food>();
 
     //apple
-    Food apple = new Fruit();
-        apple.setName("apple");
-        apple.setKg(2.5);
-        ((Fruit)apple).setReadyToEat(true);
+    Food strawberry = new Fruit();
+        strawberry.setName("strawberry");
+        strawberry.setKg(2.5);
+        ((Fruit)strawberry).setReadyToEat(true);
 
-        appleDish.setFood(apple);
-        appleDish.setDishColor("green");
-        dishes.add(appleDish);
+        strawberryDish.setFood(strawberry);
+        strawberryDish.setDishColor("green");
+        dishes.add(strawberryDish);
 
     //banana
     Food banana = new Fruit();
@@ -43,7 +43,7 @@ public class Main {
         pepperDish.setDishColor("blue");
         dishes.add(pepperDish);
 
-        System.out.println(appleDish.compareTo(bananaDish));
+        //System.out.println(strawberryDish.compareTo(bananaDish));
 
         Collections.sort(dishes);
 
@@ -56,8 +56,7 @@ public class Main {
             JPanel p = current.draw();
             fr.add(current.draw());
         }
-
-        fr.setSize(400,400);
+        fr.setSize(500,500);
         fr.setVisible(true);
     }
 }
