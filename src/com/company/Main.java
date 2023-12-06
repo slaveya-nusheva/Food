@@ -1,6 +1,7 @@
 package com.company;
 
 import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -49,14 +50,16 @@ public class Main {
 
         JFrame fr  = new JFrame("Food");
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        fr.setSize(800,800);
+        fr.setLayout();
 
         for (FoodInADish<Food> current : dishes)
         {
             JPanel p = current.draw();
+            p.setBounds(0,0,current.getWidth(),current.getHeight());
             fr.add(current.draw());
         }
-        fr.setSize(500,500);
+
         fr.setVisible(true);
     }
 }
