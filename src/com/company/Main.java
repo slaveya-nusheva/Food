@@ -51,7 +51,7 @@ public class Main {
         JFrame fr  = new JFrame("Food");
         fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.setSize(800,800);
-        fr.setLayout();
+      //  fr.setLayout();
 
         for (FoodInADish<Food> current : dishes)
         {
