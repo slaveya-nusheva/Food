@@ -1,6 +1,6 @@
 package com.company;
 
-public class Vegetable extends Food{
+public class Vegetable extends Food implements Comparable <Vegetable>{
     boolean isFresh;
 
     Vegetable(){
@@ -23,8 +23,11 @@ public class Vegetable extends Food{
 
     @Override
     public String toString() {
-        return "Vegetable{" +
-                "isFresh=" + isFresh +
-                '}';
+        return getName();
+    }
+
+    @Override
+    public int compareTo(Vegetable o) {
+        return 0;
     }
 }

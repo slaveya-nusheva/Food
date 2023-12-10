@@ -33,7 +33,6 @@ public class FoodInADish <T> extends DrawableObj implements Comparable<FoodInADi
 
         jp.add(foodLbl);
         jp.add(plateLbl);
-        jp.setVisible(true);
 
         return jp;
     }

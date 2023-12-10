@@ -12,9 +12,9 @@ public class Main {
 	List <FoodInADish<Food>> dishes = new ArrayList<FoodInADish<Food>>();
     FoodInADish<Food> strawberryDish = new FoodInADish<Food>();
     FoodInADish<Food> bananaDish = new FoodInADish<Food>();
-    FoodInADish<Food> pepperDish = new FoodInADish<Food>();
+    FoodInADish<Food> blueberryDish = new FoodInADish<Food>();
 
-    //apple
+    //strawberry
     Food strawberry = new Fruit();
         strawberry.setName("strawberry");
         strawberry.setKg(2.5);
@@ -31,35 +31,34 @@ public class Main {
         ((Fruit)banana).setReadyToEat(true);
 
         bananaDish.setFood(banana);
-        bananaDish.setDishColor("white");
+        bananaDish.setDishColor("yellow");
         dishes.add(bananaDish);
 
     //pepper
-    Food pepper = new Vegetable();
-        pepper.setName("pepper");
-        pepper.setKg(4.2);
-        ((Vegetable)pepper).setFresh(true);
+    Food blueberry = new Vegetable();
+        blueberry.setName("blueberry");
+        blueberry.setKg(4.2);
+        ((Vegetable)blueberry).setFresh(true);
 
-        pepperDish.setFood(pepper);
-        pepperDish.setDishColor("blue");
-        dishes.add(pepperDish);
+        blueberryDish.setFood(blueberry);
+        blueberryDish.setDishColor("blue");
+        dishes.add(blueberryDish);
 
         //System.out.println(strawberryDish.compareTo(bananaDish));
 
         Collections.sort(dishes);
 
         JFrame fr  = new JFrame("Food");
-        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        fr.setSize(800,800);
-      //  fr.setLayout();
+        fr.setSize(800,400);
+      fr.setLayout(new GridLayout(1,12));
 
         for (FoodInADish<Food> current : dishes)
         {
             JPanel p = current.draw();
             p.setBounds(0,0,current.getWidth(),current.getHeight());
-            fr.add(current.draw());
+            fr.add(p);
         }
-
+        fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fr.setVisible(true);
     }
 }
